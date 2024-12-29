@@ -140,6 +140,16 @@ export const Footer = props => {
                       NotionNext {siteConfig('VERSION')}
                     </a>
                   </p>
+                  <p className='text-base text-gray-7'>
+                    ICP备案
+                    <a
+                      href='https://github.com/tangly1024/NotionNext'
+                      rel='nofollow noopner noreferrer'
+                      target='_blank'
+                      className='px-1 text-gray-1 hover:underline'>
+                      NotionNext {siteConfig('VERSION')}
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
