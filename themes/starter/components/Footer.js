@@ -12,7 +12,7 @@ export const Footer = props => {
   const STARTER_FOOTER_LINK_GROUP = siteConfig('STARTER_FOOTER_LINK_GROUP', [])
   return (
     <>
-      {/* <!-- ====== Footer Section Start --> */}
+      {/* ====== Footer Section Start ====== */}
       <footer
         className='wow fadeInUp relative z-10 bg-[#090E34] pt-20 lg:pt-[100px]'
         data-wow-delay='.15s'>
@@ -68,7 +68,6 @@ export const Footer = props => {
                 <h4 className='mb-9 text-lg font-semibold text-white'>
                   {siteConfig('STARTER_FOOTER_BLOG_LATEST_TITLE')}
                 </h4>
-                {/* 展示两条最新博客文章 */}
                 <div className='flex flex-col gap-8'>
                   {latestPosts?.map((item, index) => {
                     return (
@@ -96,8 +95,7 @@ export const Footer = props => {
           </div>
         </div>
 
-        {/* 底部版权信息相关 */}
-
+        {/* 底部版权信息 */}
         <div className='mt-12 border-t border-[#8890A4] border-opacity-40 py-8 lg:mt-[60px]'>
           <div className='container'>
             <div className='-mx-4 flex flex-wrap'>
@@ -128,6 +126,7 @@ export const Footer = props => {
                   </div>
                 </div>
               </div>
+
               <div className='w-full px-4 md:w-1/3 lg:w-1/2'>
                 <div className='my-1 flex justify-center md:justify-end'>
                   <p className='text-base text-gray-7'>
@@ -140,20 +139,22 @@ export const Footer = props => {
                       NotionNext {siteConfig('VERSION')}
                     </a>
                   </p>
-                  <p className='text-base text-gray-7'>
-                    ICP备案
-                    <a
-                      href='https://github.com/tangly1024/NotionNext'
-                      rel='nofollow noopner noreferrer'
-                      target='_blank'
-                      className='px-1 text-gray-1 hover:underline'>
-                      NotionNext {siteConfig('VERSION')}
-                    </a>
-                  </p>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+
+        {/* 添加备案信息 */}
+        <div className="container mt-4">
+          {siteConfig('BEI_AN') && (
+            <div className="text-center text-white">
+              <i className="fas fa-shield-alt" />{' '}
+              <a href='https://beian.miit.gov.cn/' className='mr-2'>
+                {siteConfig('BEI_AN')}
+              </a>
+            </div>
+          )}
         </div>
 
         {/* Footer 背景 */}
@@ -171,7 +172,7 @@ export const Footer = props => {
           </span>
         </div>
       </footer>
-      {/* <!-- ====== Footer Section End --> */}
+      {/* ====== Footer Section End ====== */}
     </>
   )
 }
